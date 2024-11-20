@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "name": "Frontend",
+      "frameworks": [
+        {
+          "name": "React",
+          "tools": [
+            {
+              "name": "Create React App",
+              "command": "npx create-react-app {}",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "Vite",
+              "command": "npm create vite@latest -- {} --template react",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "Remix",
+              "command": "npx create-remix@latest",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "Gatsby",
+              "command": "npm init gatsby",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "Next.js",
+              "command": "npx create-next-app@latest",
+              "dependencies": [ "node" ]
+            }
+          ]
+        },
+        {
+          "name": "Angular",
+          "tools": [
+            {
+              "name": "Angular CLI",
+              "command": "ng new",
+              "dependencies": [ "node", "angular-cli" ]
+            },
+            {
+              "name": "Nx Workspace",
+              "command": "npx create-nx-workspace",
+              "dependencies": [ "node", "nx" ]
+            }
+          ]
+        },
+        {
+          "name": "Vue",
+          "tools": [
+            {
+              "name": "Vue CLI",
+              "command": "vue create",
+              "dependencies": [ "node", "vue-cli" ]
+            },
+            {
+              "name": "Vite",
+              "command": "npm create vite@latest -- --template vue",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "Nuxt.js",
+              "command": "npx nuxi init",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "Quasar Framework",
+              "command": "quasar create",
+              "dependencies": [ "node", "quasar-cli" ]
+            }
+          ]
+        },
+        {
+          "name": "Svelte",
+          "tools": [
+            {
+              "name": "Svelte CLI",
+              "command": "npx degit sveltejs/template",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "SvelteKit",
+              "command": "npm create svelte@latest",
+              "dependencies": [ "node" ]
+            },
+            {
+              "name": "Vite",
+              "command": "npm create vite@latest -- --template svelte",
+              "dependencies": [ "node" ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Backend",
+      "frameworks": [
+        {
+          "name": "Javascript/Node",
+          "tools": [
+            {
+              "name": "Express",
+              "command": "mkdir {} && cd {} && npx express-generator",
+              "dependencies": [ "node" ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "node",
+      "check_command": "node --version",
+      "install_commands": {
+        "windows": "winget install OpenJS.NodeJS.LTS",
+        "macos": "brew install node",
+        "apt": "sudo apt-get update && sudo apt-get install -y nodejs npm",
+        "dnf": "sudo dnf install nodejs npm",
+        "arch": "sudo pacman -S nodejs npm"
+      }
+    },
+    {
+      "name": "vue-cli",
+      "check_command": "vue --version",
+      "install_commands": {
+        "windows": "npm install -g @vue/cli",
+        "macos": "npm install -g @vue/cli",
+        "apt": "npm install -g @vue/cli",
+        "dnf": "npm install -g @vue/cli",
+        "arch": "npm install -g @vue/cli"
+      }
+    }
+  ]
+}
